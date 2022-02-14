@@ -1,6 +1,7 @@
 {
     "java.project.sourcePaths": [
-        "college1",
-        "college2"
+        "college2/",
+        "college1"
+
     ]
 }

@@ -2,34 +2,48 @@ package opdr2b;
 
 public class Voetbalclub {
 
-    private char ch;
-    private String club;
+    private String naam;
     private int aantalGewonnen;
     private int aantalGelijk;
     private int aantalVerloren;
-    public Voetbalclub(String club){
-       this.club = club;
+    private int aantalGespeeld;
+    private int aantalPunten;
+
+    public Voetbalclub(String naam) {
+        this.naam = naam;
     }
 
+    public String getNaam() {
+        return this.naam;
+    }
+
+    public int aantalGespeeld() {
+        return aantalGespeeld;
+
+    }
 
     public void verwerkResultaat(char ch) {
-        if (ch == 'w')
+        if (ch == 'w') {
             aantalGewonnen = aantalGewonnen + 1;
-        if (ch == 'g')
+            aantalPunten = aantalPunten + 3;
+        }
+        if (ch == 'g') {
             aantalGelijk = aantalGelijk + 1;
-        if (ch == 'v')
+            aantalPunten = aantalPunten + 1;
+        }
+        if (ch == 'v') {
             aantalVerloren = aantalVerloren + 1;
-    }
-
-
-    public int aantalGespeeld(int aantalGewonnen, int aantalGelijk, int aantalVerloren) {
+        }
+        aantalGespeeld = aantalGespeeld + 1;
 
     }
 
-    public int aantalPunten(int aantalGewonnen, int aantalGelijk, int aantalVerloren) {
-        return aantalGewonnen + aantalGelijk + aantalVerloren;
+    public int aantalPunten() {
+        return aantalPunten;
     }
-    public String toString(){
-        String str = "";
-        return str;
+
+    public String toString() {
+        return naam + " " + aantalGespeeld + " " + aantalGewonnen + " " + aantalGelijk + " " + aantalVerloren + " "
+                + aantalPunten;
     }
+}
