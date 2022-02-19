@@ -2,7 +2,9 @@
     "java.project.sourcePaths": [
         "college1",
         "college2/",
-        "college3"
+        "college3",
+        "college4",
+        "college5",
 
     ]
 }
