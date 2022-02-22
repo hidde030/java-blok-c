@@ -10,7 +10,11 @@ public class Voetbalclub {
     private int aantalPunten;
 
     public Voetbalclub(String naam) {
-        this.naam = naam;
+        if(naam == "" || naam == null){
+            this.naam = "FC";
+        } else{
+            this.naam = naam;
+        }
     }
 
     public String getNaam() {
@@ -18,32 +22,31 @@ public class Voetbalclub {
     }
 
     public int aantalGespeeld() {
-        return aantalGespeeld;
+        return aantalGewonnen + aantalGelijk + aantalVerloren;
 
     }
 
     public void verwerkResultaat(char ch) {
         if (ch == 'w') {
             aantalGewonnen = aantalGewonnen + 1;
-            aantalPunten = aantalPunten + 3;
         }
         if (ch == 'g') {
             aantalGelijk = aantalGelijk + 1;
-            aantalPunten = aantalPunten + 1;
         }
         if (ch == 'v') {
             aantalVerloren = aantalVerloren + 1;
+        } else{
+            return;
         }
-        aantalGespeeld = aantalGespeeld + 1;
-
     }
 
     public int aantalPunten() {
-        return aantalPunten;
+        int punten = aantalGewonnen * 3;
+        return punten = aantalGelijk + punten;
     }
 
     public String toString() {
         return naam + " " + aantalGespeeld + " " + aantalGewonnen + " " + aantalGelijk + " " + aantalVerloren + " "
-                + aantalPunten;
+                + aantalPunten();
     }
 }
