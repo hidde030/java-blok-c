@@ -5,17 +5,22 @@ public class Cirkel {
     private int xPositie;
     private int yPositie;
 
-    public Cirkel(int radius,int xPositie, int yPositie){
-        this.radius = radius;
-        this.xPositie = xPositie;
-        this.yPositie = yPositie;
+    public Cirkel(int rad,int x, int y) throws IllegalArgumentException{
+
+        this.radius = rad;
+        this.xPositie = x;
+        this.yPositie = y;
+        if(this.radius <= 0) {
+            throw new IllegalArgumentException("Radius moet groter dan 0 zijn!");
+        }
     }
-    public String getMessage(){
-        String str = "Radius moet groter dan 0 zijn!";
-        return str;
-    }
+
     public String toString(){
-        String str = "cirkel (" +xPositie+" "+ yPositie + ") met radius: " + radius;
-        return str;
+
+        return "cirkel (" + this.radius+" "+ this.yPositie + ") met radius: " + this.radius;
     }
 }
+/*  - de code niet meer compileert : Komt omdat
+    - de applicatie helemaal niet uitgevoerd kan worden
+    - de applicatie tijdens uitvoeren stopt
+    - de applicatie gewoon alles uitvoert maar de uitvoer verandert*/

@@ -4,7 +4,7 @@ public class Klant {
     private String naam;
     private double kortingsPercentage;
 
-    public Klant(String nm){
+    public Klant(String nm) {
         this.naam = nm;
     }
 
