@@ -4,20 +4,20 @@ public class Klant {
     private String naam;
     private double kortingsPercentage;
 
-    public Klant(String nm) {
-        this.naam = nm;
+    public Klant(String naam) {
+        this.naam = naam;
     }
 
-    public void setKorting(double kP) {
-        this.kortingsPercentage = kP;
+    public void setKorting(double kortingsPercentage) {
+        this.kortingsPercentage = kortingsPercentage;
     }
 
-    public double getKorting() {
+    public double getKortingsPercentage() {
         return kortingsPercentage;
     }
 
     public String toString() {
-        return naam + kortingsPercentage;
+        return "op naam van " + naam + " korting : " + kortingsPercentage + "%";
     }
 
 }

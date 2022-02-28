@@ -3,13 +3,14 @@ package opdr4b;
 public class Auto {
     private String type;
     private double prijsPerDag;
-    public Auto(String tp, double prPd){
-        this.type = tp;
-        this.prijsPerDag = prPd;
+
+    public Auto(String type, double prijsPerDag) {
+        this.type = type;
+        this.prijsPerDag = prijsPerDag;
     }
 
-    public void setPrijsPerDag(double prPd) {
-        this.prijsPerDag = prPd;
+    public void setPrijsPerDag(double prijsPerDag) {
+        this.prijsPerDag = prijsPerDag;
     }
 
     public double getPrijsPerDag() {
@@ -17,7 +18,6 @@ public class Auto {
     }
 
     public String toString() {
-        return type  + prijsPerDag;
-
+        return "autotype: " + type + " met prijs per dag: " + prijsPerDag;
     }
 }

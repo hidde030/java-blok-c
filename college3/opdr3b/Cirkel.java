@@ -20,7 +20,4 @@ public class Cirkel {
         return "cirkel (" + this.radius+" "+ this.yPositie + ") met radius: " + this.radius;
     }
 }
-/*  - de code niet meer compileert : Komt omdat
-    - de applicatie helemaal niet uitgevoerd kan worden
-    - de applicatie tijdens uitvoeren stopt
-    - de applicatie gewoon alles uitvoert maar de uitvoer verandert*/
+
