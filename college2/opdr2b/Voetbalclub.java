@@ -41,12 +41,12 @@ public class Voetbalclub {
     }
 
     public int aantalPunten() {
-        int punten = aantalGewonnen * 3;
-        return punten = aantalGelijk + punten;
+        int aantalPunten = aantalGewonnen * 3;
+        return aantalPunten = aantalGelijk + aantalPunten;
     }
 
     public String toString() {
         return naam + " " + aantalGespeeld + " " + aantalGewonnen + " " + aantalGelijk + " " + aantalVerloren + " "
-                + aantalPunten();
+                + aantalPunten;
     }
 }

@@ -1,10 +1,11 @@
 {
     "java.project.sourcePaths": [
-        "college1",
-        "college2/",
-        "college3",
-        "college4",
+        "practise-stuff",
         "college5",
-
+        "college4",
+        "college3",
+        "college2",
+        "college1",
+        "college6"
     ]
 }

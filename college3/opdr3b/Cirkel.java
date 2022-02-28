@@ -17,7 +17,7 @@ public class Cirkel {
 
     public String toString(){
 
-        return "cirkel (" + this.radius+" "+ this.yPositie + ") met radius: " + this.radius;
+        return "cirkel (" + this.xPositie+" "+ this.yPositie + ") met radius: " + this.radius;
     }
 }
 

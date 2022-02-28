@@ -12,7 +12,7 @@ public class Main {
         z2.setBreedte(2.5);
         z2.setLengte(100.0);
         z2.setDiepte(2.0);
-        double inh = z2.inhoud();
+        // double inh = z2.inhoud();
         System.out.println("GEGEVENS ZWEMBAD: "+z2.toString());
         System.out.println("BEREKENDE INHOUD: " + z2.inhoud());
     }
