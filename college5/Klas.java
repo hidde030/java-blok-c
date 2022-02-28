@@ -15,13 +15,26 @@ public class Klas {
     }
 
     public void wijzigCijfer(String nm, double nweCijfer) {
-
-
+        for (Leerling leerling : leerling) {
+            if (leerling.getNaam().equals(nm)) {
+                leerling.setCijfer(nweCijfer);
+            }
+        }
     }
+
+    public ArrayList<Leerling> getLeerlingen() {
+        return leerling;
+    }
+
     public int aantalLeerlingen(){
-//        this.leerling
+        return leerling.size();
+
     }
     public String toString() {
-        return "In klas " + klasCode + " zitten de volgende leerlingen: ";
+        String str =  "In klas " + klasCode + " zitten de volgende leerlingen: \n";
+        for (int i = 0; i <leerling.size() ; i++) {
+            str = str  + leerling.get(i) + '\n';
+        }
+        return str;
     }
 }
