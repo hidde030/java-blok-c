@@ -2,8 +2,6 @@ package opdr6a;
 
 import java.time.LocalDate;
 
-import javax.swing.text.html.HTMLDocument.RunElement;
-
 public class Game {
     private String naam;
     private int releaseJaar;
@@ -22,12 +20,9 @@ public class Game {
     /**
      * Methode huidigeWaarde() berekent wat de waarde in het huidige jaar is.
      * 2 games zijn hetzelfde als de naam en het releaseJaar hetzelfde zijn.
-     * 
-     * @return
      */
-    public double huidigeWaarde() {
-
-        return huidigeWaarde();
+    public void huidigeWaarde() {
+        System.out.println(LocalDate.now());
     }
 
 }

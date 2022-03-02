@@ -17,8 +17,7 @@ public class Persoon {
     }
 
     public boolean koop(Game g) {
-        // return this.game.koop
-
+        return false;
     }
 
     public boolean verkoop(Game g2, Persoon p2) {
