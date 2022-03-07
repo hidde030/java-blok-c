@@ -27,8 +27,8 @@ public class Game {
         int jarenOud = huidigJaar - releaseJaar;
         double kortingsPercentage = 0.7;
         double huidigeWaarde = 0;
-        for (int i = 0; i < jarenOud+1; i++) {
-            huidigeWaarde = nieuwprijs * (Math.pow(kortingsPercentage, i)) ;
+        for (int i = 0; i < jarenOud + 1; i++) {
+            huidigeWaarde = nieuwprijs * (Math.pow(kortingsPercentage, i));
         }
         if (jarenOud == 0)
             return nieuwprijs;
@@ -36,4 +36,22 @@ public class Game {
             return huidigeWaarde;
     }
 
+    public boolean equals(Object andereObject) {
+        boolean gelijkeObjecten = false;
+
+        if (andereObject instanceof Game) {
+            Game andereGame = (Game) andereObject;
+            if (this.naam.equals(andereGame.naam) && this.releaseJaar == andereGame.releaseJaar ) {
+                gelijkeObjecten = true;
+            }
+        }
+        return gelijkeObjecten;
+
+
+    }
+    public String toString() {
+        String str = naam + ", uitgegeven in "+releaseJaar+ "; nieuwprijs: €" + String.format("%,.2f", nieuwprijs) + " nu voor: €" + String.format("%,.2f", huidigeWaarde());
+        str = str.replaceAll("\\.", ",");
+        return str;
+    }
 }
