@@ -34,7 +34,9 @@ public class Persoon {
 
     public boolean verkoop(Game g, Persoon koper) {
         for (Game game : mijnGames) {
+//            Zoek naar 1 game
             if (g.equals(game) && koper.koop(g)) {
+//                Als de game gelijk is van de
                 this.budget += g.huidigeWaarde();
                 mijnGames.remove(g);
                 return true;
@@ -44,12 +46,15 @@ public class Persoon {
     }
 
     public String toString() {
-        String str = naam + " heeft een budget van €" +  String.format("%,.2f", budget) + " en bezit de volgende games:";
+        String str = naam + " heeft een budget van €" + String.format("%,.2f", budget) + " en bezit de volgende games:";
         str = str.replaceAll("\\.", ",");
-
-        for (int i = 0; i <mijnGames.size() ; i++) {
-            str = str  + mijnGames.get(i);
+        for (Game game : mijnGames) {
+            str = str + "\n" + game;
         }
+        // For loop is hetzelfde andere manier...
+        // for (int i = 0; i < mijnGames.size(); i++) {
+        // str = str + mijnGames.get(i);
+        // }
         return str;
 
     }
