@@ -1,11 +1,12 @@
 package opdr6a;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class Persoon {
     private String naam;
     private double budget;
-    private ArrayList<Game> game = new ArrayList<Game>();
+    private ArrayList<Game> mijnGames = new ArrayList<Game>();
 
     public Persoon(String nm, double bud) {
         this.naam = nm;
@@ -17,11 +18,40 @@ public class Persoon {
     }
 
     public boolean koop(Game g) {
+        if (g.huidigeWaarde() <= this.budget) {
+            for (Game game : mijnGames) {
+                if (Objects.equals(g.getNaam(), game.getNaam())) {
+                    return false;
+                }
+            }
+            mijnGames.add(g);
+            this.budget -= g.huidigeWaarde();
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public boolean verkoop(Game g, Persoon koper) {
+        for (Game game : mijnGames) {
+            if (g.equals(game) && koper.koop(g)) {
+                this.budget += g.huidigeWaarde();
+                mijnGames.remove(g);
+                return true;
+            }
+        }
         return false;
     }
 
-    public boolean verkoop(Game g2, Persoon p2) {
-        return false;
+    public String toString() {
+        String str = naam + " heeft een budget van €" +  String.format("%,.2f", budget) + " en bezit de volgende games:";
+        str = str.replaceAll("\\.", ",");
+
+        for (int i = 0; i <mijnGames.size() ; i++) {
+            str = str  + mijnGames.get(i);
+        }
+        return str;
+
     }
 
 }

@@ -1,6 +1,8 @@
 package opdr6a;
 
+import java.text.DecimalFormat;
 import java.time.LocalDate;
+import java.util.Locale;
 
 public class Game {
     private String naam;
@@ -27,13 +29,11 @@ public class Game {
         int jarenOud = huidigJaar - releaseJaar;
         double kortingsPercentage = 0.7;
         double huidigeWaarde = 0;
+
         for (int i = 0; i < jarenOud + 1; i++) {
             huidigeWaarde = nieuwprijs * (Math.pow(kortingsPercentage, i));
         }
-        if (jarenOud == 0)
-            return nieuwprijs;
-        else
-            return huidigeWaarde;
+        return huidigeWaarde;
     }
 
     public boolean equals(Object andereObject) {
@@ -50,6 +50,7 @@ public class Game {
 
     }
     public String toString() {
+//        System.out.println(DecimalFormat.getCurrencyInstance(Locale.GERMAN).format(nieuwprijs));
         String str = naam + ", uitgegeven in "+releaseJaar+ "; nieuwprijs: €" + String.format("%,.2f", nieuwprijs) + " nu voor: €" + String.format("%,.2f", huidigeWaarde());
         str = str.replaceAll("\\.", ",");
         return str;
