@@ -44,7 +44,10 @@ public class Persoon {
         }
         return false;
     }
-
+    public ArrayList<Game> bepaalGamesNietInBezit(ArrayList<Game> teKoop) {
+        teKoop.removeAll(mijnGames);
+        return teKoop;
+    }
     public String toString() {
         String str = naam + " heeft een budget van €" + String.format("%,.2f", budget) + " en bezit de volgende games:";
         str = str.replaceAll("\\.", ",");
@@ -58,5 +61,6 @@ public class Persoon {
         return str;
 
     }
+
 
 }
