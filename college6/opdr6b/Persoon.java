@@ -44,6 +44,10 @@ public class Persoon {
         }
         return false;
     }
+    public ArrayList<Game> bepaalGamesNietInBezit(ArrayList<Game> teKoop) {
+        teKoop.removeAll(mijnGames);
+        return teKoop;
+    }
 
     public Game zoekGameOpNaam(String g) {
         for (Game game : mijnGames) {
@@ -69,5 +73,6 @@ public class Persoon {
         return str;
 
     }
+
 
 }
