@@ -1,6 +1,7 @@
 package opdr6a;
 
 
+import opdr6b.Game;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

@@ -1,4 +1,4 @@
-package opdr6a;
+package opdr6b;
 
 import java.time.LocalDate;
 
