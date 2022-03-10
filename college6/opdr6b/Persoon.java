@@ -45,6 +45,17 @@ public class Persoon {
         return false;
     }
 
+    public Game zoekGameOpNaam(String g) {
+        for (Game game : mijnGames) {
+            if (game.getNaam() == g) {
+                return game;
+            } else {
+                return null;
+            }
+        }
+        return null;
+    }
+
     public String toString() {
         String str = naam + " heeft een budget van €" + String.format("%,.2f", budget) + " en bezit de volgende games:";
         str = str.replaceAll("\\.", ",");
