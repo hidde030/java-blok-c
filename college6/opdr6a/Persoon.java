@@ -19,6 +19,7 @@ public class Persoon {
 
     public boolean koop(Game g) {
         if (g.huidigeWaarde() <= this.budget) {
+//            mijnGames.contains(g);
             for (Game game : mijnGames) {
                 if (Objects.equals(g.getNaam(), game.getNaam())) {
                     return false;
