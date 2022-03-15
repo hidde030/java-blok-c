@@ -2,6 +2,6 @@ public class HoofdletterProces implements OpmaakProces {
     public HoofdletterProces(){}
 
     public String maakOp(String input) {
-        return input.toLowerCase();
+        return input.toUpperCase();
     }
 }

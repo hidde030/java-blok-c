@@ -1,11 +1,19 @@
-public class StringProcessor {
-//    private ArrayList<>() = new ArrayList<>();
+import javax.sql.rowset.spi.SyncResolver;
+import java.util.ArrayList;
 
+public class StringProcessor {
+    private ArrayList<OpmaakProces> processen = new ArrayList<>();
 
     public StringProcessor(){}
-    public void voegProcesToe(HoofdletterProces hij) {
+
+    public String verwerk(String input){
+        for (OpmaakProces proces : processen){
+             input = proces.maakOp(input);
+        }
+        return  input;
     }
 
-    public String verwerk(String inputString) {
+    public void voegProcesToe(OpmaakProces proces){
+        processen.add(proces);
     }
 }
