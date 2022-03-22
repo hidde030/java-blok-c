@@ -10,7 +10,6 @@ public class VervangProces implements OpmaakProces {
 
 
     public String maakOp(String input) {
-        String result = input.replaceAll(oud, nieuw);
-        return result;
+        return input.replaceAll(oud, nieuw);
     }
 }

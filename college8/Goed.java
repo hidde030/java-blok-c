@@ -1,3 +1,3 @@
 interface Goed {
-    public double huidigWaarde();
+    public double huidigeWaarde();
 }

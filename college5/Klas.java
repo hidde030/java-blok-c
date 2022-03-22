@@ -2,7 +2,6 @@ import java.util.ArrayList;
 
 public class Klas {
     private String klasCode;
-    //    private Leerling leerling;
     private ArrayList<Leerling> leerling = new ArrayList<>();
 
     public Klas(String kC) {
@@ -33,6 +32,7 @@ public class Klas {
     }
     public String toString() {
         String str =  "In klas " + klasCode + " zitten de volgende leerlingen: \n";
+
         for (int i = 0; i <leerling.size() ; i++) {
             str = str  + leerling.get(i) + '\n';
         }

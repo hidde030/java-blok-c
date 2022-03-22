@@ -1,6 +1,3 @@
-package opdr9a;
-
-
 import java.text.NumberFormat;
 import java.util.Locale;
 
@@ -18,7 +15,6 @@ public class Utils {
     public static String euroBedrag(double bedrag, int precisie) {
         totaal++;
         return String.format("€ "+"%."+ precisie +"f",bedrag);
-//        String str =  NumberFormat.getCurrencyInstance(new Locale("nl", "NL")).format(bedrag);
     }
     public static int getTotaal(){
         return totaal;
