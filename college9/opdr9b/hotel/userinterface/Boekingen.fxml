@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+
+<AnchorPane prefHeight="346.0" prefWidth="467.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox alignment="CENTER_LEFT" layoutX="72.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="50.0" prefWidth="351.0">
+         <children>
+            <Label text="Naam: ">
+               <HBox.margin>
+                  <Insets right="30.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="NaamInput" alignment="CENTER_RIGHT" minWidth="200.0">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </TextField>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" layoutX="72.0" layoutY="50.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="50.0" prefWidth="351.0">
+         <children>
+            <Label text="Adres: ">
+               <HBox.margin>
+                  <Insets right="30.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="AdresInput" alignment="CENTER_RIGHT" minWidth="200.0" prefHeight="25.0" prefWidth="191.0">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </TextField>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" layoutX="64.0" layoutY="100.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="50.0" prefWidth="351.0">
+         <children>
+            <Label prefWidth="67.0" text="Aankomstijd">
+               <HBox.margin>
+                  <Insets right="30.0" />
+               </HBox.margin>
+            </Label>
+            <DatePicker fx:id="AankomstInput" prefHeight="25.0" prefWidth="181.0" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" layoutX="58.0" layoutY="157.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="50.0" prefWidth="351.0">
+         <children>
+            <Label text="Vertrekdatum">
+               <HBox.margin>
+                  <Insets right="30.0" />
+               </HBox.margin>
+            </Label>
+            <DatePicker fx:id="VertekInput" prefHeight="25.0" prefWidth="182.0" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" layoutX="58.0" layoutY="207.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="50.0" prefWidth="351.0">
+         <children>
+            <Label text="Kamertype">
+               <HBox.margin>
+                  <Insets right="30.0" />
+               </HBox.margin>
+            </Label>
+            <ComboBox fx:id="KamerInput" prefHeight="25.0" prefWidth="194.0" />
+         </children>
+      </HBox>
+      <Button layoutX="240.0" layoutY="276.0" mnemonicParsing="false" text="Reset" />
+      <Button layoutX="301.0" layoutY="276.0" mnemonicParsing="false" text="Boek" />
+   </children>
+</AnchorPane>
