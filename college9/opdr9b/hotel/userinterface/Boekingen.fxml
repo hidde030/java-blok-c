@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.HBox?>
 
 
-<AnchorPane prefHeight="346.0" prefWidth="467.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="346.0" prefWidth="467.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="opdr9b.hotel.userinterface.BoekingenController">
    <children>
       <HBox alignment="CENTER_LEFT" layoutX="72.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="50.0" prefWidth="351.0">
          <children>

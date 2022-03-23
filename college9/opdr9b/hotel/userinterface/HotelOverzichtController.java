@@ -1,5 +1,6 @@
 package opdr9b.hotel.userinterface;
 
+import opdr9b.hotel.model.Boeking;
 import opdr9b.hotel.model.Hotel;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -12,9 +13,12 @@ import javafx.scene.control.ListView;
 import java.time.LocalDate;
 
 public class HotelOverzichtController {
-    @FXML private Label hotelnaamLabel;
-    @FXML private ListView boekingenListView;
-    @FXML private DatePicker overzichtDatePicker;
+    @FXML
+    private Label hotelnaamLabel;
+    @FXML
+    private ListView boekingenListView;
+    @FXML
+    private DatePicker overzichtDatePicker;
 
     private Hotel hotel = Hotel.getHotel();
 
@@ -44,9 +48,13 @@ public class HotelOverzichtController {
     }
 
     public void toonBoekingen() {
-        System.out.println("toonBoekingen() is nog niet geïmplementeerd!");
         ObservableList<String> boekingen = FXCollections.observableArrayList();
+        Hotel hotelBoekingen = Hotel.getHotel();
+        boekingen.add(hotelBoekingen.toString());
 
+
+
+//Breid methode toonBoekingen() uit zodat je alle boekingen (per boeking begin-/einddatum, kamernummer en klantnaam) toont op de datum die in het scherm is geselecteerd!
         // Vraag de boekingen op bij het Hotel-object.
         // Voeg voor elke boeking in nette tekst (string) toe aan de boekingen-lijst.
 

@@ -1,0 +1,160 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Java",
+            "type": "java",
+            "request": "launch",
+            "stopOnEntry": true,
+            "jdkPath": "${env:JAVA_HOME}/bin",
+            "cwd": "${fileDirname}",
+            "startupClass": "${fileBasenameNoExtension}",
+            "classpath": [
+                ".",
+                "${fileDirname}"
+            ]
+        },
+        {
+            "name": "Java Console App",
+            "type": "java",
+            "request": "launch",
+            "stopOnEntry": true,
+            "jdkPath": "${env:JAVA_HOME}/bin",
+            "cwd": "${fileDirname}",
+            "startupClass": "${fileBasenameNoExtension}",
+            "classpath": [
+                ".",
+                "${fileDirname}"
+            ],
+            "externalConsole": true
+        },
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch Arrays",
+            "request": "launch",
+            "mainClass": "Arrays",
+            "projectName": "java-blok-c_42f3da93"
+        },
+        {
+            "type": "java",
+            "name": "Launch Mainimpl",
+            "request": "launch",
+            "mainClass": "Mainimpl",
+            "projectName": "java-blok-c_42f3da93"
+        },
+        {
+            "type": "java",
+            "name": "Launch ShortHand",
+            "request": "launch",
+            "mainClass": "ShortHand",
+            "projectName": "java-blok-c_42f3da93"
+        },
+        {
+            "type": "java",
+            "name": "Launch Split",
+            "request": "launch",
+            "mainClass": "Split",
+            "projectName": "java-blok-c_42f3da93"
+        },
+        {
+            "type": "java",
+            "name": "Launch opdr1",
+            "request": "launch",
+            "mainClass": "opdr1",
+            "projectName": "java-blok-c_42f3da93"
+        },
+        {
+            "type": "java",
+            "name": "Launch opdr2",
+            "request": "launch",
+            "mainClass": "opdr2",
+            "projectName": "java-blok-c_42f3da93"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "opdr2a.Main",
+            "projectName": "java-blok-c_42f3da93"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main(1)",
+            "request": "launch",
+            "mainClass": "opdr2b.Main",
+            "projectName": "java-blok-c_42f3da93"
+        },
+        {
+            "type": "java",
+            "name": "Launch opdr3",
+            "request": "launch",
+            "mainClass": "opdr3",
+            "projectName": "java-blok-c_42f3da93"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main(2)",
+            "request": "launch",
+            "mainClass": "opdr3b.Main",
+            "projectName": "java-blok-c_42f3da93"
+        },
+        {
+            "type": "java",
+            "name": "Launch opdr4",
+            "request": "launch",
+            "mainClass": "opdr4",
+            "projectName": "java-blok-c_42f3da93"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main(3)",
+            "request": "launch",
+            "mainClass": "opdr4a.Main",
+            "projectName": "java-blok-c_42f3da93"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main(4)",
+            "request": "launch",
+            "mainClass": "opdr4b.Main",
+            "projectName": "java-blok-c_42f3da93"
+        },
+        {
+            "type": "java",
+            "name": "Launch opdr5",
+            "request": "launch",
+            "mainClass": "opdr5",
+            "projectName": "java-blok-c_42f3da93"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main(5)",
+            "request": "launch",
+            "mainClass": "opdr6a.Main",
+            "projectName": "java-blok-c_42f3da93"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main(6)",
+            "request": "launch",
+            "mainClass": "opdr9a.Main",
+            "projectName": "java-blok-c_42f3da93"
+        },
+        {
+            "type": "java",
+            "name": "Launch HotelApp",
+            "request": "launch",
+            "mainClass": "opdr9b.hotel.HotelApp",
+            "projectName": "java-blok-c_42f3da93"
+        }
+    ]
+}

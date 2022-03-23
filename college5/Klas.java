@@ -32,10 +32,11 @@ public class Klas {
     }
     public String toString() {
         String str =  "In klas " + klasCode + " zitten de volgende leerlingen: \n";
+        for (Leerling leerling:  leerling) {
+            str += leerling + "\n";
 
-        for (int i = 0; i <leerling.size() ; i++) {
-            str = str  + leerling.get(i) + '\n';
         }
+
         return str;
     }
 }
