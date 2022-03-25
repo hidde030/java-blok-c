@@ -70,7 +70,7 @@
             <ComboBox fx:id="KamerInput" prefHeight="25.0" prefWidth="194.0" />
          </children>
       </HBox>
-      <Button layoutX="240.0" layoutY="276.0" mnemonicParsing="false" text="Reset" />
-      <Button layoutX="301.0" layoutY="276.0" mnemonicParsing="false" text="Boek" />
+      <Button layoutX="240.0" layoutY="276.0" mnemonicParsing="false" text="Reset" fx:id="reset"/>
+      <Button layoutX="301.0" layoutY="276.0" mnemonicParsing="false" text="Boek" fx:id="boek" />
    </children>
 </AnchorPane>

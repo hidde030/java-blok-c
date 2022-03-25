@@ -52,4 +52,15 @@ public class Boeking {
 
 		return gelijk;
 	}
+
+	@Override
+	public String toString() {
+		return "Boeking{" +
+				"boekDatum=" + boekDatum +
+				", aankomstDatum=" + aankomstDatum +
+				", vertrekDatum=" + vertrekDatum +
+				", boeker=" + boeker +
+				", geboekteKamer=" + geboekteKamer +
+				'}';
+	}
 }
