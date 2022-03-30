@@ -1,16 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
-<?import javafx.scene.control.DatePicker?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
-
-<AnchorPane prefHeight="346.0" prefWidth="467.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="opdr9b.hotel.userinterface.BoekingenController">
+<AnchorPane prefHeight="346.0" prefWidth="467.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="opdr9b.hotel.userinterface.BoekingenController">
    <children>
       <HBox alignment="CENTER_LEFT" layoutX="72.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="50.0" prefWidth="351.0">
          <children>
@@ -70,7 +64,8 @@
             <ComboBox fx:id="KamerInput" prefHeight="25.0" prefWidth="194.0" />
          </children>
       </HBox>
-      <Button layoutX="240.0" layoutY="276.0" mnemonicParsing="false" text="Reset" fx:id="reset"/>
-      <Button layoutX="301.0" layoutY="276.0" mnemonicParsing="false" text="Boek" fx:id="boek" />
+      <Button fx:id="reset" layoutX="240.0" layoutY="276.0" mnemonicParsing="false" onAction="#resetBoeking" text="Reset" />
+      <Button fx:id="boek" layoutX="301.0" layoutY="276.0" mnemonicParsing="false"  onAction="#boek" text="Boek" />
+      <Label text="Label" />
    </children>
 </AnchorPane>

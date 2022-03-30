@@ -15,14 +15,13 @@ import javafx.stage.Stage;
 import opdr9b.hotel.model.Boeking;
 import opdr9b.hotel.model.Hotel;
 
-import java.io.IOException;
 import java.time.LocalDate;
 
 public class HotelOverzichtController {
     @FXML
     private Label hotelnaamLabel;
     @FXML
-    private ListView boekingenListView;
+    private ListView<String> boekingenListView;
     @FXML
     private DatePicker overzichtDatePicker;
 
@@ -44,7 +43,7 @@ public class HotelOverzichtController {
         overzichtDatePicker.setValue(dagLater);
     }
 
-    public void nieuweBoeking(ActionEvent actionEvent) throws IOException {
+    public void nieuweBoeking(ActionEvent actionEvent) throws Exception {
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("Boekingen.fxml"));
         Parent root = loader.load();
@@ -52,22 +51,21 @@ public class HotelOverzichtController {
         newstage.setScene(new Scene(root));
         newstage.initModality(Modality.APPLICATION_MODAL);
         newstage.showAndWait();
+        initialize();
 
     }
 
     public void toonBoekingen() {
         ObservableList<String> boekingen = FXCollections.observableArrayList();
-        Hotel hotelBoekingen = Hotel.getHotel();
-        boekingen.add(hotelBoekingen.toString());
-        for (Boeking b : hotel.getBoekingen()) {
-            b.toString();
+
+        LocalDate date = overzichtDatePicker.getValue();
+
+        for(Boeking boeking : hotel.getBoekingen()){
+            if(boeking.getBoekDatum().equals(date)) {
+                boekingen.add("Begin: " + boeking.getAankomstDatum() + " Eind: " + boeking.getVertrekDatum() + " Kamer: " + boeking.getKamer().getKamerNummer() + " Naam: " + boeking.getBoeker().getNaam());
+            }
         }
 
-
-
-//Breid methode toonBoekingen() uit zodat je alle boekingen (per boeking begin-/einddatum, kamernummer en klantnaam) toont op de datum die in het scherm is geselecteerd!
-        // Vraag de boekingen op bij het Hotel-object.
-        // Voeg voor elke boeking in nette tekst (string) toe aan de boekingen-lijst.
         boekingenListView.setItems(boekingen);
     }
 }
