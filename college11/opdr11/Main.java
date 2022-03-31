@@ -1,11 +1,15 @@
 package opdr11;
 
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-
 public class Main {
-    public static void main(String[] args) throws IOException {
-        ReadFile.loadFile("artikelen.txt");
+    public static void main(String[] args){
+        LeesFile.bronBestand();
+        String bron = LeesFile.gebruikerInput();
+        LeesFile.bestemmingBestand();
+        String bestemming = LeesFile.gebruikerInput();
+        LeesFile.vulKoersIn();
+        String koers = LeesFile.gebruikerInput();
+        Valuta.setKoers(koers);
+        LeesFile.leesFile(bron, bestemming);
     }
+
 }

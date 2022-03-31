@@ -42,7 +42,7 @@ public class Voetbalclub {
 
     public int aantalPunten() {
         int aantalPunten = aantalGewonnen * 3;
-        return aantalPunten = aantalGelijk + aantalPunten;
+        return aantalGelijk + aantalPunten;
     }
 
     public String toString() {
